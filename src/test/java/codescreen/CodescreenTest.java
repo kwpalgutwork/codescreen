@@ -42,13 +42,7 @@ public class CodescreenTest {
 		CreditCardSelectionPage ccSelectionPage = homePage.navigateToCreditCards();
 		SecuredCreditCardApplication securedCCApplication = ccSelectionPage.selectSecuredCreditCard();
 		securedCCApplication.skipApplicationPrefill();
+		
 		assertTrue(securedCCApplication.getSecuredCreditCardCashAdvanceAPRRate() > 20);
-
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 }
