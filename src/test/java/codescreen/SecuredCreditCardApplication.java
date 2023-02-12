@@ -22,6 +22,8 @@ public class SecuredCreditCardApplication {
 
     public double getSecuredCreditCardCashAdvanceAPRRate() {
         String aprStringWithPercent = driver.findElement(By.xpath("//b[contains(@class, 'cash-rate')]")).getText();
+
+        // remove % symbol from the end of the string 
         return Double.parseDouble(aprStringWithPercent.substring(0, aprStringWithPercent.length()-1));
     }        
 }
